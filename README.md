@@ -41,6 +41,10 @@ CapeTownMagazine is a  website designed to showcase Cape Town’s culture, attra
 ## Changelog
 - **v1.0:** Initial submission with all HTML pages, images, and README.  
 
+## Visual Representation
+### Website Sitemap
+![Website Sitemap](Images/sitemap.png)
+
 ## References
 **Images :**
 - Waterfront — [link](https://share.google/nWnQddsjQh0pJ0J3Z)  
