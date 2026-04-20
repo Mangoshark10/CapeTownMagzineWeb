@@ -43,7 +43,7 @@ CapeTownMagazine is a  website designed to showcase Cape Town’s culture, attra
 
 ## Visual Representation
 ### Website Sitemap
-![Website Sitemap](Images/sitemap.png)
+![Website Sitemap](../RootWebsiteImages/sitemap.png)
 
 ## References
 **Images :**
