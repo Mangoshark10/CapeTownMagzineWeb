@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+       
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    </head>
+    <body>
+         <img src="../images/logo.jpg" alt="Cape Town Magazine Logo" width="120" height="130">
+   
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="aboutUs.html">About Us</a>
+            <a href="news.html">News</a>
+            <a href="thingsToDo.html">Things To Do</a>
+            <a href="membershipForm.html">Membership Form</a>
+            <a href="contactUS.html">Contact Us</a>
+        </nav>
+        <hr>
+        <tr>
+            <td>
+                <h1>Membership Form</h1>
+                <p>To subscribe to Cape Town Magazine, please fill out the form below:</p>
+                <form action="submit_order.php" method="post">
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" name="name" required>
+                    <br>
+                    <br>
+
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" required>
+                    <br>
+                    <br>
+
+                    <label for="subscription">Subscription Type:</label><br>
+                    <select id="subscription" name="subscription" required>
+                        <option value="">Select...</option>
+                        <option value="monthly">Monthly - R81</option>
+                        <option value="yearly">Yearly - R500</option>
+                    </select>
+                    <br>
+                    <br>
+
+                    <input type="submit" value="Subscribe">
+                </form>
+            </td>
+
+        </tr>
+
+    </body>
+    <footer>
+        <hr>
+        <p>&copy; 2026 Cape Town Magazine</p>
+    </footer>
+</html>
