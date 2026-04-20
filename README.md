@@ -5,7 +5,7 @@
 - **Student Number:** ST10500166  
 
 ## Project Overview
-CapeTownMagazine is a static website designed to showcase Cape Town’s culture, attractions, and lifestyle. The project demonstrates HTML structure, navigation, content organization, and a basic membership/order form. Images and references are used to make the content authentic and visually engaging.
+CapeTownMagazine is a  website designed to showcase Cape Town’s culture, attractions, and lifestyle. The project demonstrates HTML structure, navigation, content organization, and a basic membership/order form. Images and references are used to make the content authentic and visually engaging.,
 
 ## Goals and Objectives
 - Provide a clear online guide to Cape Town’s attractions and events.  
