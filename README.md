@@ -55,4 +55,4 @@ CapeTownMagazine is a static website designed to showcase Cape Town’s culture,
 - [https://youtu.be/HGTJBPNC-Gw?si=PO2JXy0WXGcoCBeS](https://youtu.be/HGTJBPNC-Gw?si=PO2JXy0WXGcoCBeS)  
 - [https://youtu.be/zIN54lhJtQU?si=pHTF1xwNTyF7U96B](https://youtu.be/zIN54lhJtQU?si=pHTF1xwNTyF7U96B)  
 
-**Website inspiration:** [CapeTownMagazine.com](https://www.capetownmagazine.com) (content rephrased for educational use).  
+**Website inspiration:** [CapeTownMagazine.com](https://www.capetownmagazine.com) .  
