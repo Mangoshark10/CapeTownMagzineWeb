@@ -57,5 +57,5 @@ CapeTownMagazine is a  website designed to showcase Cape Town’s culture, attra
 
 **Website inspiration:** [CapeTownMagazine.com](https://www.capetownmagazine.com) .  
 
-**Visual reprensentation like sitemap and wireframes:** [Canva] (https://www.canva.com) 
+**Visual reprensentation like sitemap and wireframes:** [Canva](https://www.canva.com) 
 
