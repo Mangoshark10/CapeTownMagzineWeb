@@ -56,3 +56,5 @@ CapeTownMagazine is a  website designed to showcase Cape Town’s culture, attra
 - [https://youtu.be/zIN54lhJtQU?si=pHTF1xwNTyF7U96B](https://youtu.be/zIN54lhJtQU?si=pHTF1xwNTyF7U96B)  
 
 **Website inspiration:** [CapeTownMagazine.com](https://www.capetownmagazine.com) .  
+**Visual reprensentation like sitemap and wireframes:** [Canva] (https://www.canva.com) 
+
