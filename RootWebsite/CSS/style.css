@@ -11,7 +11,7 @@ body {
 }
 
 header {
-    /* These lines keep your links and search bar pinned to the top of the screen */
+    /* These lines keep  links and search bar pinned to the top of the screen */
     position: fixed; 
     top: 0;
     left: 0;
