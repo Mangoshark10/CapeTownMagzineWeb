@@ -1,50 +1,87 @@
-
 body {
     background: linear-gradient(to bottom, #0e83e2, #000000); 
     font-family: Arial, sans-serif;
     color: #ffffff;
-    background-attachment: fixed;
-}
-nav {
+    background-attachment: fixed; /* keeps the background frozen while scrolling */
     text-align: center;
-    padding: 10px 0; 
+    margin: 0;
+    padding: 0;
+    /* Adjusted space at the top so content doesn't hide behind the slightly taller header */
+    padding-top: 140px; 
+}
+
+header {
+    /* These lines keep your links and search bar pinned to the top of the screen */
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures the header stays on top of everything else */
+    
+    /* Solid background color blocks the page text from showing through the header when scrolling */
+    background: #094775; 
+    padding: 12px 20px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Adds a nice separation line */
+    
+    /* Keeps navbar and search box compact and centered vertically */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px; /* Slightly more gap between nav and search box */
+}
+
+#logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%; /* Stretches the image to touch the top and bottom borders exactly */
+    width: auto;
+    object-fit: contain; /* Prevents the logo from stretching out of shape */
+}
+
+#TableM {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%; /* Stretches the mountain to touch the top and bottom borders exactly */
+    width: auto;
+    object-fit: contain; /* Prevents the mountain from stretching out of shape */
+}
+/* styling rules for navigation menu pills */
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+    gap: 10px; 
+    margin-bottom: 0;
+    padding: 0;
 }
 
 nav a {
-    text-decoration: none; 
+    display: inline-block;
+    background-color: #0b3c5d; 
     color: #ffffff; 
-    font-weight: bold;
-}
-nav {
-    display: flex;
-    justify-content: center;    /* Centers the items horizontally */
-    gap: 15px; 
-}
-
-nav {
-    font-size: 25px;
+    text-decoration: none; /* gets rid of default link lines */
+    padding: 8px 18px;     /* Increased padding for bigger look */   
+    border-radius: 30px; /* makes links look like neat capsule  */
+    font-family: sans-serif;
+    font-size: 19px;     
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* smooth interactive animations */
 }
 
-
-footer {
-    text-align: center;
+nav a:hover {
+    background-color: #328cc1; /* changes background on cursor hover */
+    transform: scale(1.05); /* pops  slightly out */
 }
 
-body { 
-    text-align: center;
-
-} 
-
-#logo {
-    display: block;
-    margin: 0 auto; 
-    padding-top: 20px; 
-}
+/* search container alignment */
 .search-container {
     display: flex;
     align-items: center;
-    gap: 8px;
-    margin: 15px 0;
+    gap: 10px;
+    margin: 4px 0 0 0;
     font-family: sans-serif;
 }
 
@@ -52,50 +89,149 @@ body {
     display: flex;
     align-items: center;
     border: 1px solid #ccc;
-    padding: 6px 10px;
-    border-radius: 4px;
+    padding: 6px 12px;     /* Larger padding inside the search box */
+    border-radius: 6px;
     background: #fff;
+    width: 220px;          /* Set a comfortable base width for the input section */
 }
 
 .search-box input {
     border: none;
-    outline: none;
-    font-size: 14px;
+    outline: none; /* kills the active browser ring */
+    font-size: 16px;       /* Bigger input text box size */
+    color: #000;
+    width: 100%;
 }
 
-.search-label {
-    font-weight: bold;
-}
-
+/* homepage list container layout */
 .articles-list {
     display: flex;
     flex-direction: column;
     gap: 30px; 
 }
 
-/* Container spacing for the form block */
-
-
-/* to align the logo on the left of the page*/
-#logo {
-    display: block;
-    margin-left: 0;
-    margin-right: auto;
-    margin-bottom: 20px; 
+/* isolated multi column grid styling like friends website */
+.about-grid, .grid-layout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* maps elements side by side in pairs */
+    gap: 40px;
+    text-align: left;
+    margin-top: 25px;
 }
 
-/* Centers the entire form block container on the page */
-.form-container {
-    max-width: 450px;      
-    margin: 40px auto;     
+.grid-title {
+    grid-column: span 2; /* forces standard header across entire display row */
+    text-align: left;
+    border-bottom: 2px solid #328cc1;
+    padding-bottom: 8px;
+}
+
+.site-item, .about-card {
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.06); /* subtle frosted glass card layer */
     padding: 20px;
-    text-align: center;     
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.site-item:hover, .about-card:hover {
+    transform: translateY(-5px); /* card lift up on mouse over */
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.site-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-top: auto; /* pulls image base down automatically */
+}
+
+/*  contact details styling layout */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin: 15px 0;
+}
+
+.social-links img {
+    transition: transform 0.2s ease;
+}
+
+.social-links img:hover {
+    transform: scale(1.2); /* enlarges icons smoothly when selected */
+}
+
+.map-responsive iframe {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+/*  membership form design styling rules */
+.form-container {
+    max-width: 500px;      
+    margin: 50px auto;     
+    padding: 35px;
+    background: rgba(11, 60, 93, 0.55); 
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4); /* background drop shadow depth */
 }
 
 .signup-form {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 22px;
+    text-align: left; /* structural label tracking lines up cleanly left */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.signup-form label {
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 0.3px;
+}
+
+.signup-form input[type="text"],
+.signup-form input[type="email"],
+.signup-form select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.signup-form select option {
+    background-color: #0b3c5d; 
+    color: white;
+}
+
+/* changes element borders instantly on active item focus selection */
+.signup-form input:focus,
+.signup-form select:focus {
+    border-color: #328cc1;
+    background-color: rgba(255, 255, 255, 0.2);
+    outline: none;
 }
 
 .form-submit {
@@ -105,35 +241,49 @@ body {
 }
 
 .submit-btn {
-    min-width: 150px;
+    min-width: 200px;
+    padding: 14px;
+    background: #0e83e2;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
 }
 
-#TableM {
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 20px; 
-    }
-nav a {
-    display: inline-block;
-    background-color: #0b3c5d; 
-    text-decoration: none;     /* Completely removes the link underline */
-    padding: 8px 16px;        
-    border-radius: 30px;       /* Smoothly curves */
-    font-family: sans-serif;
-    font-size: 24px;
-    font-weight: 500;
-    }
-
-/* Enhances when hovering over the bubbles */
-nav a:hover {
-    background-color: #328cc1; /* Chanegs to a lighter  blue on mouse hover */
+.submit-btn:hover {
+    background: #328cc1;
+    transform: translateY(-2px);
 }
 
-/*space for bubble */
-nav {
-    display: flex;
-    flex-wrap: wrap;           /* Wraps bubbles cleanly on mobile phone screens */
-    gap: 12px;                 /* Sets a solid, uniform gap between each link button */
-    margin-bottom: 20px;
+footer {
+    text-align: center;
+    padding: 30px 0;
+}
+
+/* smart mobile device screen query responsiveness scaling styles */
+@media (max-width: 768px) {
+    body {
+        padding-top: 210px; /* Gives extra clean space on mobile where elements wrap vertically */
+    }
+    header {
+        position: fixed;
+    }
+    #logo, #TableM {
+        position: static; /* Allows images to layout normally on small screen sizes */
+        max-height: 45px;
+        margin: 5px auto;
+    }
+    .about-grid, .grid-layout, .contact-grid {
+        grid-template-columns: 1fr; /* drops elements into a clean single vertical item flow on tiny mobile displays */
+    }
+    .grid-title {
+        grid-column: span 1;
+    }
+    nav a {
+        font-size: 15px;
+        padding: 6px 12px;
+    }
 }
