@@ -148,7 +148,7 @@ nav a:hover {
     margin-top: auto; /* pulls image base down automatically */
 }
 
-/*  contact details styling layout */
+/* contact details styling layout */
 .contact-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -177,7 +177,7 @@ nav a:hover {
     border-radius: 8px;
 }
 
-/*  membership form design styling rules */
+/* membership form design styling rules */
 .form-container {
     max-width: 500px;      
     margin: 50px auto;     
@@ -210,6 +210,7 @@ nav a:hover {
 .signup-form input[type="text"],
 .signup-form input[type="email"],
 .signup-form input[type="password"],
+.signup-form input[type="date"],
 .signup-form select,
 .signup-form textarea {
     width: 100%;
@@ -222,6 +223,11 @@ nav a:hover {
     box-sizing: border-box;
     font-family: Arial, sans-serif;
     transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.signup-form input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    cursor: pointer;
 }
 
 .signup-form textarea {
