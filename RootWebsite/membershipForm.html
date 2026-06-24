@@ -10,7 +10,109 @@
 
 </head>
 
+<body><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Membership Form - Cape Town Magazine</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="CSS/style.css">
+
+</head>
+
 <body>
+
+    <header>
+        <img id="logo" src="Images/logo.jpg" alt="Cape Town Magazine Logo" width="120" height="130">
+        <img id="TableM" src="Images/TableM2.png" alt="Table Mountain2" width="230" height="220">
+
+        <nav id="nav-1">
+            <a href="index.html">Home</a>
+            <a href="aboutUs.html">About Us</a>
+            <a href="news.html">News</a>
+            <a href="thingsToDo.html">Things To Do</a>
+            <a href="membershipForm.html">Membership Form</a>
+            <a href="contactUS.html">Contact Us</a>
+        </nav>
+
+        <div class="search-container">
+            <label for="search-input" class="search-label">Search</label>
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Type here...">
+                <img src="Images/search.jpg" width="20" height="20" alt="search">
+            </div>
+        </div>
+    </header>
+
+    <main class="form-container">
+        <h1>Membership Form</h1>
+        <p>To subscribe to Cape Town Magazine, please fill out the form below:</p>
+        
+        <form id="myForm" action="submit_order.php" method="post" class="signup-form" onsubmit="return validationOfForm()">
+            
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+
+            <div class="form-group">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+
+            <div class="form-group sets-inline">
+                <label>Gender:</label>
+                <div class="radio-container">
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female" class="radio-label">Female</label>
+                    
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male" class="radio-label">Male</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="subscription">Subscription Type:</label>
+                <select id="subscription" name="subscription" required>
+                    <option value="">Select...</option>
+                    <option value="monthly">Monthly - R81</option>
+                    <option value="yearly">Yearly - R500</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="feedback">Feedback / Message:</label>
+                <textarea id="feedback" name="feedback" rows="4" placeholder="Enter your feedback..."></textarea>
+            </div>
+
+            <div class="form-submit">
+                <input type="submit" value="Subscribe" class="submit-btn">
+            </div>
+            
+        </form>
+    </main>
+
+    <footer>
+        <hr>
+        <p>© 2026 Cape Town Magazine</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
 
     <header>
         <img id="logo" src="Images/logo.jpg" alt="Cape Town Magazine Logo" width="120" height="130">
